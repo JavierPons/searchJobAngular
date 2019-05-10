@@ -6,19 +6,17 @@
   <button (click)="search()">Search</button>
 </div>
 
-
+<div *ngIf="response != null && response.length === 0">
+      <h4>There is not that kind of job possition at the moment.</h4>
+</div>
 <div>
   <ul>
     <li *ngFor='let data of response' >
-      
-      <div *ngIf="!data.length > 0; else Com">
           <p>Title: {{data.position_title}}</p>
           <p>Organization name: {{data.organization_name}}</p>
           <p>Start day: {{data.start_date}}</p>
           <p>End day: {{data.end_date}}</p>
-          <p>Location: {{data.locations}}</p>
-      </div>
-      <ng-template #Com>There is not that kind of job possition at the moment.</ng-template>
+          <p>Location: {{data.locations}}</p> 
     </li>  
   </ul>
 </div>
