@@ -1,0 +1,30 @@
+<br/>
+
+<div id="input">
+  <input type='text' placeholder="Type a job here" [(ngModel)]='userName'>
+  <br/>
+  <button (click)="search()">Search</button>
+</div>
+
+
+<div>
+  <ul>
+    <li *ngFor='let data of response' >
+      
+      <div *ngIf="!data.length > 0; else Com">
+          <p>Title: {{data.position_title}}</p>
+          <p>Organization name: {{data.organization_name}}</p>
+          <p>Start day: {{data.start_date}}</p>
+          <p>End day: {{data.end_date}}</p>
+          <p>Location: {{data.locations}}</p>
+      </div>
+      <ng-template #Com>Content to render when value is null.</ng-template>
+    </li>  
+  </ul>
+</div>
+
+
+
+
+
+
