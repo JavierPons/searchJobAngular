@@ -1,3 +1,17 @@
+How to clone this repository locally:
+
+Go to Clone or download.
+Copy the URL
+Open Terminal
+In the terminal type $ git clone 'paste the URL'
+Note: (If you don't have node.js and npm installed in your computer you must install it before start.)
+
+After you have cloned it go to the directory using cd command in the terminal. Once you are in the folder that contents the application. Run command npm i node-modules or npm install --save. That command will install node_modules.
+
+Once you have all node_module and other folders as src and public run in the terminal ng serve. In a few seconds browser will open in localhost:4200.
+
+
+
 # Searchjobangular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
